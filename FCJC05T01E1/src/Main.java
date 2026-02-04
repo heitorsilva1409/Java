@@ -9,7 +9,7 @@ public class Main {
 
         float valor1;
         float valor2;
-        float resultado = 0;
+        float resultado;
 
         if (operacao < 0 || operacao == 8) {
             System.out.println("Opção inválida!");
