@@ -11,8 +11,6 @@ public class Main {
         double temp1;
         double tempConvertida;
 
-
-
         System.out.println("Digite qual a medida de partida (Celcius, Fahrenheit ou Kelvin)");
         String partida = entrada.nextLine();
 
@@ -57,7 +55,7 @@ public class Main {
                 System.out.println("Digite para qual medida será feita a conversão");
                 conversao = entrada.nextLine();
 
-                //Conversão de Fahrenheit para Celcius C = (F x 5/9) - 32
+                //Conversão de Fahrenheit para Celcius C = (F -32) * 5 / 9
                 if (conversao.equals("Celcius")) {
                     tempConvertida = (temp1 - 32) * 5 / 9;
                     System.out.printf("A temperatura convertida de Fahrenheit para Celcius é: %.2fºC", tempConvertida);
@@ -66,7 +64,7 @@ public class Main {
                 else if (conversao.equals("Kelvin")) {
                     tempConvertida = (temp1 - 32) * 5 / 9;
                     tempK = tempConvertida + 273.15;
-                    System.out.printf("A temperatura convertida de Fahrenheit para Kelvin é: %.4fºK", tempK); //Utilizei a variável tempK no lugar da tempConvertida pois ela ja foi declarada como double e não é possível realizar operações entre variáveis do tipo float e double
+                    System.out.printf("A temperatura convertida de Fahrenheit para Kelvin é: %.4fºK", tempK);
                 }
                 else {
                     System.out.println("Opção inválida!");
@@ -97,7 +95,7 @@ public class Main {
                 else if (conversao.equals("Fahrenheit")) {
                     tempK = temp1 - 273.15;
                     tempK = (tempK * 9/5) + 32;
-                    System.out.printf("A temperatura convertida de Kelvin para Fahrenheit é: %.2fºF", tempK); //Reutilizei a variável tempK pois ela ja foi declarada como double e não é possível realizar operações entre variáveis do tipo float e double
+                    System.out.printf("A temperatura convertida de Kelvin para Fahrenheit é: %.2fºF", tempK);
                 }
                 else {
                     System.out.println("Opção inválida!");
