@@ -49,8 +49,8 @@ public class Main {
         //Bloco partindo de Fahrenheit
         else if (partida.equals("Fahrenheit")) {
             System.out.println("Digite a temperatura de partida(apenas número)");
-            temp1 = entrada.nextFloat();
-            entrada.nextLine();
+            temp1Formatada = entrada.nextLine().replace(",",".");
+            temp1 = Double.parseDouble(temp1Formatada);
 
             //Verificação do zero absoluto
             if (temp1 >= -459.67) {
@@ -59,14 +59,14 @@ public class Main {
 
                 //Conversão de Fahrenheit para Celcius C = (F x 5/9) - 32
                 if (conversao.equals("Celcius")) {
-                    tempConvertida = (temp1 / 5 * 9) - 32;
+                    tempConvertida = (temp1 - 32) * 5 / 9;
                     System.out.printf("A temperatura convertida de Fahrenheit para Celcius é: %.2fºC", tempConvertida);
                 }
                 //Conversão de Fahrenheit para Kelvin -> converte de Fahrenheit para Celcius e depois para Kelvin
                 else if (conversao.equals("Kelvin")) {
-                    tempConvertida = (temp1 / 5 * 9) - 32;
+                    tempConvertida = (temp1 - 32) * 5 / 9;
                     tempK = tempConvertida + 273.15;
-                    System.out.printf("A temperatura convertida de Celsius para Kelvin é: %.4fºK", tempK); //Utilizei a variável tempK no lugar da tempConvertida pois ela ja foi declarada como double e não é possível realizar operações entre variáveis do tipo float e double
+                    System.out.printf("A temperatura convertida de Fahrenheit para Kelvin é: %.4fºK", tempK); //Utilizei a variável tempK no lugar da tempConvertida pois ela ja foi declarada como double e não é possível realizar operações entre variáveis do tipo float e double
                 }
                 else {
                     System.out.println("Opção inválida!");
@@ -80,8 +80,8 @@ public class Main {
         //Bloco partindo de Kelvin
         else if (partida.equals("Kelvin")) {
             System.out.println("Digite a temperatura de partida(apenas número)");
-            temp1 = entrada.nextFloat();
-            entrada.nextLine();
+            temp1Formatada = entrada.nextLine().replace(",",".");
+            temp1 = Double.parseDouble(temp1Formatada);
 
             //Verificação do zero absoluto
             if (temp1 >= 0) {
@@ -91,13 +91,13 @@ public class Main {
                 //Conversão de Kelvin para Celcius C = K - 273.15
                 if (conversao.equals("Celcius")) {
                     tempK = temp1 - 273.15;
-                    System.out.printf("A temperatura convertida de Kelvin para CelciusC é: %.2fºF", tempK);
+                    System.out.printf("A temperatura convertida de Kelvin para CelciusC é: %.2fºC", tempK);
                 }
                 //Conversão de Kelvin para Fahrenheit -> converte para Celcius depois converte para Fahrenheit
                 else if (conversao.equals("Fahrenheit")) {
                     tempK = temp1 - 273.15;
                     tempK = (tempK * 9/5) + 32;
-                    System.out.printf("A temperatura convertida de Kelvin para Fahrenheit é: %.2fºC", tempK); //Reutilizei a variável tempK pois ela ja foi declarada como double e não é possível realizar operações entre variáveis do tipo float e double
+                    System.out.printf("A temperatura convertida de Kelvin para Fahrenheit é: %.2fºF", tempK); //Reutilizei a variável tempK pois ela ja foi declarada como double e não é possível realizar operações entre variáveis do tipo float e double
                 }
                 else {
                     System.out.println("Opção inválida!");
