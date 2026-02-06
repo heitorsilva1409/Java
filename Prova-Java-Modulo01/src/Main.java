@@ -7,17 +7,20 @@ public class Main {
         double tempK;
 
         String conversao;
-        float temp1;
-        float tempConvertida;
+        String temp1Formatada;
+        double temp1;
+        double tempConvertida;
 
-        System.out.println("Digite qual a medida de partida(Celcius, Fahrenheit ou Kelvin)");
+
+
+        System.out.println("Digite qual a medida de partida (Celcius, Fahrenheit ou Kelvin)");
         String partida = entrada.nextLine();
 
         //Bloco partindo de Celcius
         if (partida.equals("Celcius")) {
             System.out.println("Digite a temperatura de partida(apenas número)");
-            temp1 = entrada.nextFloat();
-            entrada.nextLine();
+            temp1Formatada = entrada.nextLine().replace(",",".");
+            temp1 = Double.parseDouble(temp1Formatada);
 
             //Verificação do zero absoluto
             if (temp1 >= -273.15) {
