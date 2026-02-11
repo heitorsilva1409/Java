@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class FCJC05T05E1 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         float saldo = 200.0f;

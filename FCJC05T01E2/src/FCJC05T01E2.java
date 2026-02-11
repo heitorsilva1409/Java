@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        String saldoString = entrada.nextLine();
+        String saldoString = entrada.nextLine(); //Necessário pedir o valor como String e depois tratar antes de virar float pq não é possivel realizar operações com String
         float saldo = Float.parseFloat(saldoString.replaceAll("[^0-9,]","").replace(",","."));
 
         if (saldo >= 1.00){

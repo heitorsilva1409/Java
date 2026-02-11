@@ -1,7 +1,7 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Main {
+public class FCJC05T01E1 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 

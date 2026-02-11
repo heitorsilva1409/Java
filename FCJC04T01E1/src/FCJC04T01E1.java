@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Main {
+class FCJC04T01E1 {
     public static void main(String[] args) {
         Scanner scannerNota = new Scanner(System.in);
 
