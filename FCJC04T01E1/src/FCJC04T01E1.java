@@ -9,7 +9,6 @@ class FCJC04T01E1 {
         float nota3 = scannerNota.nextFloat();
         float nota4 = scannerNota.nextFloat();
 
-
         float media = (nota1 + nota2 + nota3 + nota4) / 4;
 
         System.out.printf("%.2f", media);
