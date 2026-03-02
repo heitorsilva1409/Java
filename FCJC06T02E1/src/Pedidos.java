@@ -31,7 +31,7 @@ public class Pedidos {
 
         //se a quantidade de valores no Array produtos
          if (produtos.length == 0) {
-             System.out.println("Não há produtos para esse pedido");
+             System.out.println("\nNão há produtos para esse pedido");
          }
          //para (váriavel prodAtual do tipo Produto na lista "produtos")
          for (Produto prodAtual : produtos) {
