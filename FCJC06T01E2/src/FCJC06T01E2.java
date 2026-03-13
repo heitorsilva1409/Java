@@ -7,10 +7,9 @@ public class FCJC06T01E2 {
 
         int base = sc.nextInt();
         int expoente = sc.nextInt();
-        BigInteger resultado = exponencial(base, expoente);
-
-        System.out.println(resultado);
         sc.close();
+        BigInteger resultado = exponencial(base, expoente);
+        System.out.println(resultado);
     }
 
     public static BigInteger exponencial(int base, int expoente) {

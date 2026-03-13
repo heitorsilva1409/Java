@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String nomeCli = sc.nextLine(); //variável nome que será utilizada mais tarde como parâmetro no objeto novoCliente
         String cpfCli = sc.nextLine(); //variável cpf que será utilizada mais tarde como parâmetro no objeto novoCliente
+        String nomeCli = sc.nextLine(); //variável nome que será utilizada mais tarde como parâmetro no objeto novoCliente
         Cliente novoCliente = new Cliente(cpfCli, nomeCli); //objeto do tipo Cliente que recebe cpf e nome. A ordem em que os parâmetros são passados é muito importante
 
         int qtdProdutos = sc.nextInt();
