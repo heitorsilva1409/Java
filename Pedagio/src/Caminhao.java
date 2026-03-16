@@ -1,4 +1,10 @@
-package PACKAGE_NAME;
+public class Caminhao extends Veiculo{
+    public Caminhao(String placaVeiculo, String modelo, int qtdEixos) {
+        super(placaVeiculo, modelo, qtdEixos);
+    }
 
-public class Caminhao {
+    @Override
+    public float calcularTarifa(){
+        return qtdEixos * 7.5f;
+    }
 }

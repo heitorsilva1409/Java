@@ -1,4 +1,10 @@
-package PACKAGE_NAME;
+public class Moto extends Veiculo{
+    public Moto(String placaVeiculo, String modelo, int qtdEixos) {
+        super(placaVeiculo, modelo, qtdEixos);
+    }
 
-public class Moto {
+    @Override
+    public float calcularTarifa(){
+        return 5.00f;
+    }
 }
