@@ -85,7 +85,8 @@ public class Main {
                     codigo = sc.nextLine();
                     System.out.println("Digite os dias de atraso");
                     int diasAtraso = sc.nextInt();
-                    b.devolverItem(codigo, diasAtraso);
+                    double multa = b.devolverItem(codigo, diasAtraso);
+                    System.out.printf("A multa foi de: R$ %.2f%n", multa);
                     break;
                 case 6:
                     b.listarItens();

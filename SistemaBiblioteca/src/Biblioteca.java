@@ -15,7 +15,7 @@ public class Biblioteca {
 
     public void emprestarItem(ItemBiblioteca item) {
         if (item.isEmprestado()) {
-            System.out.println("Item já foi emprestado!");
+            System.out.println("O item informado já está emprestado.");
         } else {
             System.out.println("Item emprestado com sucesso");
         }
@@ -34,9 +34,19 @@ public class Biblioteca {
         return null;
     }
 
-    public void devolverItem(String codigo, int diasAtraso) {
-        buscarItemPorCodigo(codigo);
-
+    public double devolverItem(String codigo, int diasAtraso) {
+        ItemBiblioteca item = buscarItemPorCodigo(codigo); {
+            if (item.getCodigo().equalsIgnoreCase(codigo)) {
+                item.devolver();
+                double multa = item.calcularMulta(diasAtraso);
+                totalMultasArrecadadas += multa;
+                return multa;
+            }
+            else {
+                System.out.println("Item não encontrado");
+            }
+        }
+        return 0.00;
     }
 
     public Biblioteca(LinkedList<ItemBiblioteca> itens) {
@@ -49,17 +59,11 @@ public class Biblioteca {
 
     public void listarItens() {
         if (itens.isEmpty()) {
-            System.out.println("Não há itens cadastrados!");
+            System.out.println("Não há nenhum item cadastrado!\n");
+            return;
         }
-        else{
-            for (ItemBiblioteca item : itens) {
-                System.out.printf("%s - %s - %s - %d%n",
-                        getClass().getSimpleName(),
-                        item.getCodigo(),
-                        item.getTitulo(),
-                        item.getAnoPublicacao()
-                );
-            }
+        for (ItemBiblioteca itemBiblioteca : itens) {
+            System.out.println(itemBiblioteca);
         }
     }
 }

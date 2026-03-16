@@ -16,7 +16,9 @@ public class ItemBiblioteca {
         emprestado = true;
     }
 
-
+    public void devolver() {
+        emprestado = false;
+    }
 
     public static int getTotalItensCadastrados() {
         return totalItensCadastrados;
@@ -50,5 +52,14 @@ public class ItemBiblioteca {
         return anoPublicacao;
     }
 
-
+    @Override
+    public String toString(){
+        return String.format("%s - %s - %s - %d - %s%n",
+                getClass().getSimpleName(),
+                getCodigo(),
+                getTitulo(),
+                getAnoPublicacao(),
+                emprestado
+                );
+    }
 }
