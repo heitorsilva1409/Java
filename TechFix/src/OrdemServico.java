@@ -15,6 +15,7 @@ public class OrdemServico {
 
     public void adicionarEquipamento(Equipamento equipamento) {
         equipamentos.add(equipamento);
+        status = "Em andamento";
     }
 
     public void adicionarEquipamento(String nomeModelo) {

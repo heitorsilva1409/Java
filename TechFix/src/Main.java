@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -28,15 +29,21 @@ public class Main {
             boolean senhaValida = auth.validarSenha(senhaFormatada);
 
             if (loginValido && senhaValida) {
-                int operacao;
-                sc.nextLine();
+                int operacao = 0;
 
                 do {
-                    operacao = sc.nextInt();
-                    System.out.println("1. Adicionar equipamento\n" +
-                            "2. Listar equipamentos\n" +
-                            "3. Encerrar\n" +
-                            "4. Realizar Pagamento");
+                    try {
+                        System.out.println("Digite a operação desejada: " +
+                                "\n1. Adicionar equipamento\n" +
+                                "2. Listar equipamentos\n" +
+                                "3. Realizar Pagamento\n" +
+                                "0. Encerrar");
+                        operacao = sc.nextInt();
+                    } catch (InputMismatchException e) {
+                        sc.nextLine();
+                        System.out.println("Entrada de operação inválida!");
+                        continue;
+                    }
 
                     switch (operacao) {
                         case 1:
@@ -44,11 +51,17 @@ public class Main {
                             break;
                         case 2:
                             // Listar equipamentos
-                        case 3:
-                            // Encerrar
                             break;
-                        case 4:
+                        case 3:
                             // Realizar Pagamento
+                            break;
+                        case 0:
+                            // Encerrar
+                            System.out.println("Encerrando...");
+                            break;
+                        default :
+                            System.out.println("Opção inválida!");
+                            break;
                     }
                 } while (operacao != 0);
             }
@@ -57,8 +70,7 @@ public class Main {
             }
         }
         else {
-            System.out.println("Encerrando...");
+            System.out.println("Login cancelado!");
         }
-
     }
 }
