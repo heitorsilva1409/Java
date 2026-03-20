@@ -16,11 +16,9 @@ public class Main {
                 break;
 
             } catch (TelefoneInvalidoException e) {
-                System.out.println("Erro: telefone inválido. Tente de novo.");
+                System.out.println("Erro: " + e.getMessage());
             }
         }
-
-
     }
 }
 
