@@ -29,7 +29,7 @@ public class Main {
             boolean senhaValida = auth.validarSenha(senhaFormatada);
 
             if (loginValido && senhaValida) {
-                int operacao = 0;
+                int operacao = -1;
 
                 do {
                     try {
@@ -56,7 +56,6 @@ public class Main {
                             // Realizar Pagamento
                             break;
                         case 0:
-                            // Encerrar
                             System.out.println("Encerrando...");
                             break;
                         default :
