@@ -1,20 +1,28 @@
 import java.util.LinkedList;
+import java.util.List;
 
 public class Pedagio {
-    LinkedList<Veiculo> veiculos = new LinkedList<>();
+    List<Veiculo> veiculos = new LinkedList<>();
+    private static int contador = 0;
 
-    public void registrarVeiculos(String placaVeiculo, String modeloVeiculo, int qtdEixos){
-        Veiculo veiculo = new Veiculo(placaVeiculo, modeloVeiculo, qtdEixos);
+    public void registrarVeiculo (Veiculo veiculo){
         veiculos.add(veiculo);
+        contador++;
     }
-
-    public void listarVeiculos() {
-        for (Veiculo veiculo : veiculos) {
-            System.out.printf("%s - %s - %s - %d - %s",
-
-                    veiculo.getPlacaVeiculo(),
-                    veiculo.getModelo(),
-                    veiculo.getQtdEixos());
+    public void listarVeiculos () {
+        for (Veiculo veiculo: veiculos) {
+            System.out.println(veiculo);
         }
     }
+    public void totalTarifas () {
+        double total = 0;
+        for (Veiculo veiculo: veiculos) {
+            total += veiculo.calcularTarifa();
+        }
+        System.out.printf("O valor total dos pedágios foi de: %.2f%n", total);
+    }
+    public void mostrarTotalVeiculos () {
+        System.out.println("O total de veículos processados foi de: " + contador);
+    }
+
 }

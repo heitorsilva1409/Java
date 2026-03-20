@@ -1,10 +1,9 @@
 public class Moto extends Veiculo{
-    public Moto(String placaVeiculo, String modelo, int qtdEixos) {
-        super(placaVeiculo, modelo, qtdEixos);
+    public Moto(String placa, String modelo, int qntEixos) {
+        super(placa, modelo, qntEixos);
     }
-
     @Override
-    public float calcularTarifa(){
-        return 5.00f;
+    public double calcularTarifa (){
+        return 5.00;
     }
 }

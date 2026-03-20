@@ -80,7 +80,6 @@ public class Main {
                     System.out.println("Emprestar item por código");
                     break;
                 case 5:
-                    //Em desenvolvimento
                     System.out.println("Digite o código do Item");
                     codigo = sc.nextLine();
                     System.out.println("Digite os dias de atraso");

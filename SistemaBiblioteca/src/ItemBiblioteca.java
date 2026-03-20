@@ -1,4 +1,4 @@
-public class ItemBiblioteca {
+public abstract class ItemBiblioteca {
     private String codigo;
     private String titulo;
     private int anoPublicacao;

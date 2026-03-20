@@ -1,39 +1,23 @@
-public class Veiculo {
-    String placaVeiculo;
-    String modelo;
-    int qtdEixos;
+public abstract class Veiculo {
+    protected String placa;
+    protected String modelo;
+    protected int qntEixos;
 
-    public Veiculo(String placaVeiculo, String modelo, int qtdEixos) {
+    public Veiculo(String placa, String modelo, int qntEixos) {
+        if(placa.isEmpty() || modelo.isEmpty()){
+            System.out.println("Não é possivel colocar uma placa ou modelo vazio.");
+        }
+        this.placa = placa;
         this.modelo = modelo;
-        this.placaVeiculo = placaVeiculo;
-        this.qtdEixos = qtdEixos;
+        this.qntEixos = qntEixos;
     }
 
-    public String getModelo() {
-        return modelo;
+    public double calcularTarifa () {
+        return 0.0;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public String getPlacaVeiculo() {
-        return placaVeiculo;
-    }
-
-    public void setPlacaVeiculo(String placaVeiculo) {
-        this.placaVeiculo = placaVeiculo;
-    }
-
-    public int getQtdEixos() {
-        return qtdEixos;
-    }
-
-    public void setQtdEixos(int qtdEixos) {
-        this.qtdEixos = qtdEixos;
-    }
-
-    public float calcularTarifa() {
-        return 0.0f;
+    @Override
+    public String toString() {
+        return String.format("Veiculo: %s - Placa: %s - Modelo: %s - Eixos: %d - Total a pagar: %.2f%n", getClass().getSimpleName(), placa, modelo, qntEixos, calcularTarifa());
     }
 }

@@ -1,10 +1,9 @@
 public class Carro extends Veiculo{
-    public Carro(String placaVeiculo, String modelo, int qtdEixos) {
-        super(placaVeiculo, modelo, qtdEixos);
+    public Carro(String placa, String modelo, int qntEixos) {
+        super(placa, modelo, qntEixos);
     }
-
     @Override
-    public float calcularTarifa(){
-        return 12.00f;
+    public double calcularTarifa (){
+        return 12.00;
     }
 }
