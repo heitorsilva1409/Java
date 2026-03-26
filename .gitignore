@@ -1,10 +1,22 @@
 ### IntelliJ IDEA ###
-out/
+/out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .kotlin
+*.class
 
-### Eclipse ###
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Compilados
+*.class
+out/
+build/
+target/
+
+# Eclipse
 .apt_generated
 .classpath
 .factorypath
@@ -13,25 +25,16 @@ out/
 .springBeans
 .sts4-cache
 bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
+# VS Code
 .vscode/
 
-### Mac OS ###
+# Sistema
 .DS_Store
-
-.idea/
-*.iml
-*.iws
-*.ipr
-build/
-target/
