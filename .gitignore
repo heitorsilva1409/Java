@@ -1,40 +1,16 @@
-### IntelliJ IDEA ###
-/out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-.kotlin
-*.class
-
+# IntelliJ
 .idea/
 *.iml
-*.iws
-*.ipr
-
-# Compilados
-*.class
 out/
+
+# Build
 build/
 target/
+*.class
 
-# Eclipse
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-
-# NetBeans
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-# VS Code
+# Outros IDEs
 .vscode/
+bin/
 
 # Sistema
 .DS_Store
