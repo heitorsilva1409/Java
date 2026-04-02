@@ -27,6 +27,8 @@ public class Main {
                     int indice = sc.nextInt();
                     catalogo.remover(indice);
                     break;
+                case 0:
+                    break;
             }
         } while (opcao != 0);
     }
