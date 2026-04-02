@@ -1,5 +1,8 @@
 package domain.agenda;
 
+import domain.animal.Animal;
+import domain.funcionario.Funcionario;
+
 import java.time.Duration;
 import java.time.OffsetDateTime;
 import java.time.LocalDateTime;
@@ -7,11 +10,13 @@ import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 
 public class HorarioAgenda {
-    private OffsetDateTime hora;
+    private final OffsetDateTime horario;
+    private final Animal animal;
+    private final Funcionario funcionario;
 
-    public static boolean podeAgendar(OffsetDateTime ultimo, OffsetDateTime novo) {
-        long diferenca = Duration.between(ultimo, novo).toMinutes();
-        return diferenca >= 60;
+    public HorarioAgenda(Animal animal, OffsetDateTime horario, Funcionario funcionario) {
+        this.animal = animal;
+        this.horario = horario;
+        this.funcionario = funcionario;
     }
-
 }

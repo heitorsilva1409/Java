@@ -1,13 +1,20 @@
 package service;
 
+import domain.agenda.HorarioAgenda;
 import domain.animal.Animal;
 import domain.animal.Cachorro;
 import domain.animal.Gato;
 import domain.funcionario.Funcionario;
 
+import java.time.Duration;
 import java.time.OffsetDateTime;
+import java.util.LinkedList;
+import java.util.List;
 
 public class GerenciadorAgenda {
+    private final List<Funcionario> funcionarios = new LinkedList<>();
+    private final List<HorarioAgenda> horarios = new LinkedList<>();
+
 
     public double calcularPreco(int servico, Animal animal) {
         // calculo do preço por TIPO do pelo
