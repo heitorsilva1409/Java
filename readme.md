@@ -15,12 +15,11 @@ O ambiente está organizado de forma modular para separar conceitos teóricos de
 
 ### 🚀 Projetos e Aplicações
 *   **Sistemas Completos**: Pequenas aplicações desenvolvidas para simular regras de negócio e cenários do mundo real.
-*   **Resolução de Problemas**: Algoritmos focados em eficiência de processos, automação de rotinas e tratamento de dados.
+*   **Resolução de Problemas**: Algoritmos focados em eficiência de processos.
 
 ### 🧠 Fundamentos de POO & Recursos da Linguagem
 *   **Estruturas de POO**: Implementações práticas focadas em contratos, herança e polimorfismo.
 *   **Tratamento de Erros**: Códigos dedicados à resiliência de software através de manipulação segura de exceções.
-*   **Manipulação de APIs**: Práticas de uso de recursos nativos da linguagem (APIs de data/hora, coleções e estruturas de dados).
 *   **Desafios Técnicos**: Exercícios de fixação lógica desenvolvidos ao longo da minha formação técnica e acadêmica.
 
 ---
