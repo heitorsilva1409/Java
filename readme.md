@@ -2,7 +2,6 @@
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![SQL](https://img.shields.io/badge/sql-%2300758F.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 Bem-vindo ao meu laboratório de estudos em **Java**! Este repositório foi criado com o objetivo de centralizar, organizar e documentar minha evolução na linguagem e no ecossistema de desenvolvimento de software. 
 
